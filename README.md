@@ -14,3 +14,6 @@ Scripts to keep various programs updated. Recommendation is to invoke via Task S
 
 ### While Unlocked
 AHK script to start flashing the screen and playing annoying random noises at a set time. Useful for maintaining sleep and meeting schedules. Recommendation is to invoke via Task Scheduler. 
+
+### brightnessContrast
+AHK and PS scripts to set brightness and high contrast mode. 
