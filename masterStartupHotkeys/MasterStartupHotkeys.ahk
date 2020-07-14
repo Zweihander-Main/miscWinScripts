@@ -3,6 +3,15 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #KeyHistory 0
 #MaxThreadsPerHotkey 3
+#MenuMaskKey vkE8
+
+; Utility
+
+; Disable win key opening start menu
+; LWin & vk07::return
+; LWin::return
+
+; Hotkeys
 
 HelpArray := []
 HelpArray.push("Win+L: Lock system, monitor off")
@@ -13,7 +22,7 @@ HelpArray.push("Alt+Shift+Ctrl+F1: Get class of current window")
 HelpArray.push("Alt+F1: Create Cmder terminal unless exists already")
 HelpArray.push("Alt+Shift+F1: Create Cmder terminal no matter what")
 HelpArray.push("Alt+F5: Auto-clicker")
-HelpArray.push("Alt+F6: Record keystrokes")
+HelpArray.push("Alt+F6: Record keystrokes")+
 HelpArray.push("Alt+F7: Playback recorded keystrokes")
 HelpArray.push("Alt+F8: Playback clipboard top entry slowly")
 HelpArray.push("Alt+F9: Playback clipboard top entry quickly")
@@ -78,7 +87,7 @@ return
 	}
 	else
 	{
-		Run Cmder.exe
+		Run "C:\dev\utils\cmder\Cmder.exe Shortcut.lnk"
 	}
 	DetectHiddenWindows, off
 }
@@ -86,7 +95,7 @@ return
 
 !+F1:: ;Alt+Shift+F1: Create Cmder terminal no matter what
 {
-	Run Cmder.exe
+	Run "C:\dev\utils\cmder\Cmder.exe Shortcut.lnk"
 }
 return
 
