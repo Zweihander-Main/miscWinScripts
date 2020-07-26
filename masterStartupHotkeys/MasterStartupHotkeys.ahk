@@ -27,8 +27,10 @@ HelpArray.push("Alt+F7: Playback recorded keystrokes")
 HelpArray.push("Alt+F8: Playback clipboard top entry slowly")
 HelpArray.push("Alt+F9: Playback clipboard top entry quickly")
 HelpArray.push("Alt+Ctrl+u: Hotkey Alias For Cmder/cd ..")
+HelpArray.push("Win+T Remove title bar from active window")
 HelpArray.push("Win+Shift+?: Help Popup")
 HelpArray.push("Win+I Debug window under mouse cursor info")
+
 
 #L:: ;Win+L: Lock system, monitor off
 {
@@ -154,6 +156,13 @@ IfWinActive ahk_class VirtualConsoleClass
 	}
 	return
 }
+
+
+#T:: ;Win+T Remove title bar from active window"
+{
+	WinSet, Style, -0xC00000, A
+}
+return
 
 #?:: ;Win+Shift+?: Help Popup
 {
