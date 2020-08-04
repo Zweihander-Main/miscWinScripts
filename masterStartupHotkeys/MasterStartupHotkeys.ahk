@@ -21,11 +21,11 @@ HelpArray.push("Win+Ctrl+4: Toggle monitor configurations-4 Screen (3+1DL).xml")
 HelpArray.push("Alt+Shift+Ctrl+F1: Get class of current window")
 HelpArray.push("Alt+F1: Create Cmder terminal unless exists already")
 HelpArray.push("Alt+Shift+F1: Create Cmder terminal no matter what")
-HelpArray.push("Alt+F5: Auto-clicker")
-HelpArray.push("Alt+F6: Record keystrokes")+
-HelpArray.push("Alt+F7: Playback recorded keystrokes")
-HelpArray.push("Alt+F8: Playback clipboard top entry slowly")
-HelpArray.push("Alt+F9: Playback clipboard top entry quickly")
+HelpArray.push("Alt+Shift+F5: Auto-clicker")
+HelpArray.push("Alt+Shift+F6: Record keystrokes")+
+HelpArray.push("Alt+Shift+F7: Playback recorded keystrokes")
+HelpArray.push("Alt+Shift+F8: Playback clipboard top entry slowly")
+HelpArray.push("Alt+Shift+F9: Playback clipboard top entry quickly")
 HelpArray.push("Alt+Ctrl+u: Hotkey Alias For Cmder/cd ..")
 HelpArray.push("Win+T Toggle title bar and border from active window")
 HelpArray.push("Win+Shift+?: Help Popup")
@@ -101,7 +101,7 @@ return
 }
 return
 
-!F5:: ;Alt+F5: Auto-clicker
+!+F5:: ;Alt+Shift+F5: Auto-clicker
 {
 	Toggle := !Toggle
 	Loop
@@ -115,21 +115,21 @@ return
 return
 
 
-!F6:: ;Alt+F6: Record keystrokes
+!+F6:: ;Alt+Shift+F6: Record keystrokes
 {
 	Input, keystrokes, V C , {esc}
 }
 return
 
 
-!F7:: ;Alt+F7: Playback recorded keystrokes
+!+F7:: ;Alt+Shift+F7: Playback recorded keystrokes
 {
 	Send, %keystrokes%
 }
 return
 
 
-!F8:: ;Alt+F8: Playback clipboard top entry slowly
+!+F8:: ;Alt+Shift+F8: Playback clipboard top entry slowly
 {
 	Loop, Parse, clipboard
 	{
@@ -140,7 +140,7 @@ return
 return
 
 
-!F9:: ;Alt+F9: Playback clipboard top entry quickly
+!+F9:: ;Alt+Shift+F9: Playback clipboard top entry quickly
 Loop, Parse, clipboard
 {
    Send, {Raw}%A_LoopField%
