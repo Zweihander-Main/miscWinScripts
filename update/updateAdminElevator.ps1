@@ -1,1 +1,0 @@
-﻿start-process powershell -verb runas -argument C:\dev\psscripts\updateAdmin.ps1
